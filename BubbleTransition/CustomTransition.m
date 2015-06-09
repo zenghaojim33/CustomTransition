@@ -61,8 +61,9 @@
         
         UIView * presentedControllerView = [transitionContext viewForKey:UITransitionContextToViewKey];
         CGPoint  originalCenter = presentedControllerView.center;
-        CGSize originalSize = presentedControllerView.frame.size;
-        _bubble = [[UIView alloc]initWithFrame:[self frameForBubbleCenter:originalCenter andOriginalSize:originalSize andStart:self.startPoint]];
+        CGFloat offset = sqrt(_startPoint.x * _startPoint.x + _startPoint.y * _startPoint.y) * 2;
+        
+        _bubble = [[UIView alloc]initWithFrame:CGRectMake(0, 0, offset, offset)];
         _bubble.layer.cornerRadius = _bubble.frame.size.height / 2;
         _bubble.center = self.startPoint;
         _bubble.transform = CGAffineTransformMakeScale(0.001, 0.001);
@@ -120,12 +121,8 @@
     }else{
         
         UIView * returningControllerView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-        CGPoint originalCenter = returningControllerView.center;
-        CGSize originalSize = returningControllerView.frame.size;
+
         
-        _bubble.frame = [self frameForBubbleCenter:originalCenter andOriginalSize:originalSize andStart:self.startPoint];
-        _bubble.layer.cornerRadius = _bubble.frame.size.height / 2;
-        _bubble.center = self.startPoint;
         
         [UIView animateWithDuration:self.duration animations:^{
             _bubble.transform = CGAffineTransformMakeScale(0.001, 0.001);
