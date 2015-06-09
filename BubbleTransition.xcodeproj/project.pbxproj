@@ -14,6 +14,8 @@
 		15186D3E1B267E540016FA23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15186D3D1B267E540016FA23 /* Images.xcassets */; };
 		15186D411B267E550016FA23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15186D3F1B267E550016FA23 /* LaunchScreen.xib */; };
 		15186D4D1B267E550016FA23 /* BubbleTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15186D4C1B267E550016FA23 /* BubbleTransitionTests.m */; };
+		15186D581B267E6B0016FA23 /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 15186D571B267E6B0016FA23 /* CustomTransition.m */; };
+		15186D5B1B26CAB10016FA23 /* PresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15186D5A1B26CAB10016FA23 /* PresentedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		15186D461B267E550016FA23 /* BubbleTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15186D4B1B267E550016FA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15186D4C1B267E550016FA23 /* BubbleTransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleTransitionTests.m; sourceTree = "<group>"; };
+		15186D561B267E6B0016FA23 /* CustomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTransition.h; sourceTree = "<group>"; };
+		15186D571B267E6B0016FA23 /* CustomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransition.m; sourceTree = "<group>"; };
+		15186D591B26CAB10016FA23 /* PresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentedViewController.h; sourceTree = "<group>"; };
+		15186D5A1B26CAB10016FA23 /* PresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				15186D351B267E540016FA23 /* AppDelegate.m */,
 				15186D371B267E540016FA23 /* ViewController.h */,
 				15186D381B267E540016FA23 /* ViewController.m */,
+				15186D591B26CAB10016FA23 /* PresentedViewController.h */,
+				15186D5A1B26CAB10016FA23 /* PresentedViewController.m */,
+				15186D561B267E6B0016FA23 /* CustomTransition.h */,
+				15186D571B267E6B0016FA23 /* CustomTransition.m */,
 				15186D3A1B267E540016FA23 /* Main.storyboard */,
 				15186D3D1B267E540016FA23 /* Images.xcassets */,
 				15186D3F1B267E550016FA23 /* LaunchScreen.xib */,
@@ -220,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15186D391B267E540016FA23 /* ViewController.m in Sources */,
+				15186D5B1B26CAB10016FA23 /* PresentedViewController.m in Sources */,
 				15186D361B267E540016FA23 /* AppDelegate.m in Sources */,
 				15186D331B267E540016FA23 /* main.m in Sources */,
+				15186D581B267E6B0016FA23 /* CustomTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BubbleTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BubbleTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
