@@ -10,7 +10,7 @@ I Re-wrote it for personal practice.
 ```objective-c
 _transition = [[CustomTransition alloc]init];
 ```
-
+Modify the properties of CustomerTransition instance as you desire.
 ```objective-c
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     
